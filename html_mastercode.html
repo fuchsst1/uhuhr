@@ -27,6 +27,14 @@ body{
   background-color: #cce0ff;
 }
 
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
 </style>
 </head>
 
@@ -60,22 +68,65 @@ body{
 
 </header>
 <div class="container">
-  <div class="row">
-  <div class="row justify-content-start">
     <h2>Zeit verwalten</h2>
     <p>Effektiv und ohne grossen Aufwand</p>
   </div>
    </div>
 
 <div class="container">
-
-  <div class="row justify-content-end">
     <h2>Projekte erfassen</h2>
     <p>Erfassen Sie mit Uhuhr Ihre Zeit und sparen Sie damit Zeit!</p>
   </div>
    </div>
-
+<div class="container">
+   <form class="form-inline">
+       <div class="input-group">
+         <input class="form-control" size="50" placeholder="Project" required>
+       </div>
+     </form>
 </div>
+</div>
+
+<div class="container">
+
+<button class="btn btn-light type="button"  onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add Project</button>
+
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+var modal = document.getElementById('id01');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 </body>
 </html>
