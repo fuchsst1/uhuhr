@@ -10,6 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <style>
+
 .title {
   text-transform: uppercase;
   font-family: ;
@@ -33,6 +34,11 @@ input[type=text]{
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+.addproject {
+  margin: 2px 8px;
+
 }
 button:hover {
     opacity: 0.8;
@@ -115,9 +121,7 @@ span.psw {
 }
 </style>
 </head>
-
-<body>
-
+<!-- Das ist die Navigationsbar -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top"style="background-color:lightblue">
   <a class="navbar-brand" href="#">
     <img src="images\Uhuhr_Logo.PNG" alt="logo" width="30em" height="32em">
@@ -136,6 +140,7 @@ span.psw {
   </div>
 </nav>
 
+<!-- Das ist der Titelbereich mit Uhuhr Timamg... -->
 <header>
 
 <div class="container title" style="margin-top:80px">
@@ -162,41 +167,80 @@ span.psw {
   </div>
    </div>
     </div>
+
+<!-- Das ist der Button für Projekt wo man reinschreiben kann-->
 <div class="container">
    <form class="form-inline">
        <div class="input-group">
          <input class="form-control" size="50" placeholder="Project" required>
+
+
+         <!-- Das ist der Button für Add Procet
+          und dem Formular das sich öffnet -->
+         <button class="btn btn-light addproject" type="button"  onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add Project</button>
+         <div id="id01" class="modal">
+         <form class="modal-content animate" action="/action_page.php">
+           <div class="imgcontainer">
+             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+         </div>
+           <div class="container">
+             <label for="pname"><b>Project name</b></label>
+             <input type="text" placeholder="Project Name" name="pname" required>
+             <label for="stime"><b>Start time</b></label>
+             <input type="text" placeholder="Start time" name="stime" required>
+             </label>
        </div>
      </form>
 </div>
 </div>
 
-<div class="container">
-
-<button class="btn btn-light type="button"  onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add Project</button>
-<div id="id01" class="modal">
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+<div="container-fluid">
+<button class="btn btn-light" type="button" onclick="startTime()">Start</button>
 </div>
-    <div class="container">
-      <label for="pname"><b>Project name</b></label>
-      <input type="text" placeholder="Project Name" name="pname" required>
-      <label for="stime"><b>Username</b></label>
-      <input type="text" placeholder="Start time" name="stime" required>
+<p id="startdate"></p>
 
-      </label>
-    </div>
-    <div class="container">
-      <button class="btn btn-light type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <button class="btn btn-light type="button" onclick="document.getElementById('id01').style.display='none'" class="savebtn">Save</button>
-    </div>
-  </form>
+<div="container-fluid">
+<button class="btn btn-light" type="button" onclick="endTime()">Stop</button>
 </div>
+<p id="enddate"></p>
+
+<div="container-fluid">
+<button class="btn btn-light" type="button" onclick="counttime()">Ergebnis</button>
+</div>
+<p id="counttime"></p>
+
+<script>
+function startTime(){
+var sd = now.getTime();
+sd.getTime();
+document.getElementById("startdate").innerHTML = sd;
+}
+</script>
+
+<script>
+function endTime(){
+var ed = new Date();
+ed.setDate(15);
+document.getElementById("enddate").innerHTML = ed;
+}
+</script>
+
+<script>
+function countTime(){
+var ct = ed - sd;
+document.getElementById("counttime").innerHTML = ct;
+}
+
+function countTime(sd, ed) {
+    return sd - ed;
+
+</script>
 
 <script src="js\add_project_form.js.js"
 
 </script>
+
+</body>
 
 </body>
 </html>
