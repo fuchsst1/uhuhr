@@ -10,6 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <style>
+
 .title {
   text-transform: uppercase;
   font-family: ;
@@ -34,30 +35,112 @@ input[type=text]{
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
+.addproject {
+  margin: 2px 8px;
+
+}
+button:hover {
+    opacity: 0.8;
+}
+.btn-nav{
+  margin: 2px 2px;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+.container {
+    padding: 16px;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
 </style>
 </head>
-
-<body>
-
+<!-- Das ist die Navigationsbar -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top"style="background-color:lightblue">
   <a class="navbar-brand" href="#">
     <img src="images\Uhuhr_Logo.PNG" alt="logo" width="30em" height="32em">
     Uhuhr
   </a>
-
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
    <span class="navbar-toggler-icon"></span>
  </button>
 
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="/">Dashboard</a></li>
-      <li><a href="/">Zeitmanagement</a></li>
-      <li><a href="/">Dashboard</a></li>
-      <li><a href="/">Dashboard</a></li>
+      <button class="btn active btn-nav btn-secondary">Dashboard</button>
+      <button class="btn btn-nav btn-secondary">Projekte</button>
+      <button class="btn btn-nav btn-secondary">Dashboard</button>
+      <button class="btn btn-nav btn-secondary">Auswertung</button>
   </div>
 </nav>
 
+<!-- Das ist der Titelbereich mit Uhuhr Timamg... -->
 <header>
 
 <div class="container title" style="margin-top:80px">
@@ -66,51 +149,100 @@ input[type=text]{
  </div>
 
 </header>
-<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
     <h2>Zeit verwalten</h2>
     <p>Effektiv und ohne grossen Aufwand</p>
   </div>
    </div>
-
-<div class="container">
+ </div>
+  </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
     <h2>Projekte erfassen</h2>
     <p>Erfassen Sie mit Uhuhr Ihre Zeit und sparen Sie damit Zeit!</p>
+      </div>
   </div>
    </div>
+    </div>
+
+<!-- Das ist der Button für Projekt wo man reinschreiben kann-->
 <div class="container">
    <form class="form-inline">
        <div class="input-group">
          <input class="form-control" size="50" placeholder="Project" required>
+
+
+         <!-- Das ist der Button für Add Procet
+          und dem Formular das sich öffnet -->
+         <button class="btn btn-light addproject" type="button"  onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add Project</button>
+         <div id="id01" class="modal">
+         <form class="modal-content animate" action="/action_page.php">
+           <div class="imgcontainer">
+             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+         </div>
+           <div class="container">
+             <label for="pname"><b>Project name</b></label>
+             <input type="text" placeholder="Project Name" name="pname" required>
+             <label for="stime"><b>Start time</b></label>
+             <input type="text" placeholder="Start time" name="stime" required>
+             </label>
        </div>
      </form>
 </div>
 </div>
 
-<div class="container">
-
-<button class="btn btn-light type="button"  onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add Project</button>
-<div id="id01" class="modal">
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
+<div="container-fluid">
+<button class="btn btn-light" type="button" onclick="startTime()">Start</button>
 </div>
+<p id="startdate"></p>
+
+<div="container-fluid">
+<button class="btn btn-light" type="button" onclick="endTime()">Stop</button>
+</div>
+<p id="enddate"></p>
+
+<div="container-fluid">
+<button class="btn btn-light" type="button" onclick="counttime()">Ergebnis</button>
+</div>
+
+<p id="counttime"></p>
+
+<script>
+function startTime(){
+var sd = now.getTime();
+sd.getTime();
+document.getElementById("startdate").innerHTML = sd;
+}
+</script>
+
+<script>
+function endTime(){
+var ed = new Date();
+ed.setDate(15);
+document.getElementById("enddate").innerHTML = ed;
+}
+</script>
+
+<script>
+function countTime(){
+var ct = ed - sd;
+document.getElementById("counttime").innerHTML = ct;
+}
+
+function countTime(sd, ed) {
+    return sd - ed;
+
+</script>
+
+<script src="js\add_project_form.js.js"
+
+</script>
+
+</body>
+
 
 </body>
 </html>
