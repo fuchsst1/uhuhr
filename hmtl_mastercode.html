@@ -151,6 +151,7 @@ span.psw {
  </div>
 
 </header>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
@@ -196,47 +197,33 @@ span.psw {
 </div>
 </div>
 
-<div="container-fluid">
+<div="container">
 <button class="btn btn-light" type="button" onclick="startTime()">Start</button>
+
 </div>
+
 <p id="startdate"></p>
 
-<div="container-fluid">
+<div="container">
 <button class="btn btn-light" type="button" onclick="endTime()">Stop</button>
 </div>
 <p id="enddate"></p>
 
-<div="container-fluid">
-<button class="btn btn-light" type="button" onclick="counttime()">Ergebnis</button>
-</div>
-<p id="counttime"></p>
-
 <script>
 function startTime(){
-var sd = now.getTime();
-sd.getTime();
+  var sd = Date.parse(new Date)
+  sd /= 6000;
 document.getElementById("startdate").innerHTML = sd;
 }
-</script>
 
-<script>
 function endTime(){
-var ed = new Date();
-ed.setDate(15);
-document.getElementById("enddate").innerHTML = ed;
-}
-</script>
-
-<script>
-function countTime(){
-var ct = ed - sd;
-document.getElementById("counttime").innerHTML = ct;
+  var ed = Date.parse(new Date)
+  ed /= 6000;
+  document.getElementById("enddate").innerHTML = ed;
 }
 
-function countTime(sd, ed) {
-    return sd - ed;
-
 </script>
+
 
 <script src="js\add_project_form.js.js"
 
