@@ -9,6 +9,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js\add_project_form.js.js"></script>
 
 <style>
 
@@ -81,7 +82,7 @@ span.psw {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 50%; /* Could be more or less, depending on screen size */
 }
 .close {
     position: absolute;
@@ -130,61 +131,47 @@ span.psw {
 
 <body>
   <!-- Das ist die Navigationsbar -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" href="#">
-      <img src="images\Uhuhr_Logo.PNG" alt="logo" width="30em" height="32em">
-      Uhuhr
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-     <span class="navbar-toggler-icon"></span>
-   </button>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <a class="navbar-brand" href="#">
+    <img src="images\Uhuhr_Logo.PNG" alt="logo" width="30em" height="32em">
+    Uhuhr
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+   <span class="navbar-toggler-icon"></span>
+ </button>
 
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="nav navbar-nav">
-        <button class="btn active btn-nav btn-secondary">Dashboard</button>
-        <button class="btn btn-nav btn-secondary">Projekte</button>
-        <button class="btn btn-nav btn-secondary">Dashboard</button>
-        <button class="btn btn-nav btn-secondary">Auswertung</button>
-    </div>
-  </nav>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="nav navbar-nav">
+      <button class="btn active btn-nav btn-secondary">Dashboard</button>
+      <button class="btn btn-nav btn-secondary">Projekte</button>
+      <button class="btn btn-nav btn-secondary">Dashboard</button>
+      <button class="btn btn-nav btn-secondary">Auswertung</button>
+  </div>
+</nav>
 
-  <!-- Das ist der Titelbereich mit Uhuhr Timamg... -->
-  <div class="jumbotron" style="margin-top:60px">
-     <h1>Uhuhr</h1>
-      <p>Timemanagementsystem of your choice - Productivity</p>
-   </div>
+<!-- Das ist der Titelbereich mit Uhuhr Timamg... -->
+<div class="jumbotron" style="margin-top:60px">
+   <h1>Uhuhr</h1>
+    <p>Timemanagementsystem of your choice - Productivity</p>
+ </div>
 
-  <div class="container">
-      <h2>Zeit verwalten</h2>
-      <p>Effektiv und ohne grossen Aufwand</p>
-      <p>Save up to 40% of your time</p>
-      <div class="row">
-        <div class="col-sm-4">
-        <div class="progress">
-        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
-          </div>
+<div class="container">
+    <h2>Zeit verwalten</h2>
+    <p>Effektiv und ohne grossen Aufwand</p>
+    <p>Save up to 40% of your time</p>
+    <div class="row">
+      <div class="col-sm-4">
+      <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
         </div>
       </div>
     </div>
+  </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
+<div class="container">
     <h2>Projekte erfassen</h2>
     <p>Erfassen Sie mit Uhuhr Ihre Zeit und sparen Sie damit Zeit!</p>
-      </div>
-  </div>
-   </div>
-
-
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-    </div>
-  </div>
 </div>
-
 
 <!-- Das ist der Button für Projekt wo man reinschreiben kann-->
 <div class="container">
@@ -192,39 +179,75 @@ span.psw {
        <div class="input-group">
          <input class="form-control" size="50" placeholder="Project" required>
 
-
          <!-- Das ist der Button für Add Procet
           und dem Formular das sich öffnet -->
          <button class="btn btn-light addproject" type="button"  onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add Project</button>
          <div id="id01" class="modal">
          <form class="modal-content animate" action="/action_page.php">
-           <div class="imgcontainer">
+           <div class="container modal-content">
              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-         </div>
-           <div class="container">
+
+           <div class="container ">
              <label for="pname"><b>Project name</b></label>
              <input type="text" placeholder="Project Name" name="pname" required>
-             <label for="stime"><b>Start time</b></label>
-             <input type="text" placeholder="Start time" name="stime" required>
-             </label>
+             <label for="stime"><b>Start date</b></label>
+             <input type="text" placeholder="DD/MM/YYYY" name="sdate" required>
+             <label for="stime"><b>End date</b></label>
+             <input type="text" placeholder="DD/MM/YYYY" name="edate" required>
+            <button class="btn btn-light" type="button" id="save">Save</button>
+        </div>
+       </div>
+        </div>
        </div>
      </form>
 </div>
+
+<div class="container">
+    <h2>Aufgaben erfassen</h2>
+    <p>Wenn du nicht an einem Projekt arbeitest, erfasse Aufgaben hier!</p>
 </div>
 
-<div="container">
-<button class="btn btn-light" type="button" onclick="startTime()">Start</button>
+<!-- Das ist der Button für Tasks wo man reinschreiben kann-->
+<div class="container">
+   <form class="form-inline">
+       <div class="input-group">
+         <input class="form-control" size="50" placeholder="Task" required>
 
+         <!-- Das ist der Button für Add Procet
+          und dem Formular das sich öffnet -->
+         <button class="btn btn-light addproject" type="button"  onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Add Task</button>
+         <div id="id02" class="modal">
+         <form class="modal-content animate" action="/action_page.php">
+           <div class="container modal-content">
+             <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+           <div class="container ">
+             <label for="pname"><b>Task name</b></label>
+             <input type="text" placeholder="Task Name" name="tname" required>
+             <label for="stime"><b>Start date</b></label>
+             <input type="text" placeholder="DD/MM/YYYY" name="sdate" required>
+             <label for="stime"><b>End date</b></label>
+             <input type="text" placeholder="DD/MM/YYYY" name="edate" required>
+             <button class="btn btn-light" type="button" id="save">Save</button>
+        </div>
+
+       </div>
+        </div>
+       </div>
+     </form>
 </div>
 
+<div class="container">
+  <h2>Time Counter</h2>
+<button class="btn btn-light" type="button" onclick="startTime()">Start</button><button class="btn btn-light" type="button" onclick="endTime()" style="margin-left:5px">Stop</button>
 <p id="startdate"></p>
-
-<div="container">
-<button class="btn btn-light" type="button" onclick="endTime()">Stop</button>
-</div>
 <p id="enddate"></p>
 
+</div>
+
 <script>
+
+
 function startTime(){
   var sd = Date.parse(new Date)
   sd /= 6000;
@@ -240,9 +263,6 @@ function endTime(){
 </script>
 
 
-<script src="js\add_project_form.js.js"
-
-</script>
 
 </body>
 </html>
