@@ -3,16 +3,18 @@
 
 <head>
   <title>Uhuhr</title>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="js\add_project_form.js.js"></script>
 
 <style>
-
 
 .jumbotron{
   background-color: #71b6ce;
@@ -79,11 +81,12 @@ span.psw {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     padding-top: 60px;
 }
+
 .modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
+    width: 40%; /* Could be more or less, depending on screen size */
 }
 .close {
     position: absolute;
@@ -156,6 +159,7 @@ span.psw {
     <p>Timemanagementsystem of your choice - Productivity</p>
  </div>
 
+
 <div class="container">
     <h2>Zeit verwalten</h2>
     <p>Effektiv und ohne grossen Aufwand</p>
@@ -194,7 +198,7 @@ span.psw {
              <label for="stime"><b>Start date</b></label>
              <input type="text" placeholder="DD/MM/YYYY" name="sdate" required>
              <label for="stime"><b>End date</b></label>
-             <input type="text" placeholder="DD/MM/YYYY" name="edate" required>
+             <input type="text" placeholder="DD/MM/YYYY" name="edate">
             <button class="btn btn-light" type="button" id="save">Save</button>
         </div>
        </div>
@@ -229,9 +233,15 @@ span.psw {
              <input type="text" placeholder="DD/MM/YYYY" name="sdate" required>
              <label for="stime"><b>End date</b></label>
              <input type="text" placeholder="DD/MM/YYYY" name="edate" required>
-             <button class="btn btn-light" type="button" id="save">Save</button>
+             <label for="priority"><b>Priority</b></label>
+             <select class="form-control" id="sel1">
+                 <option>High</option>
+                 <option>Middle</option>
+                 <option>Low</option>
+               </select>
+               <br>
+             <button class="btn btn-light" type="button" id="save" style="margin-top:8px">Save</button>
         </div>
-
        </div>
         </div>
        </div>
