@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>Projekt Anlegen</title>
+
+  <meta charset="UTF-8">
+  <!--Responsiv Bootstrap-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--CSS Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!--JS Bootstrap-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <!--Verlinkung zum internen CSS-->
+  <link rel="stylesheet" href="Overview.css">
+
+</head>
+
+<body>
+
+  <h1>Projekt Anlegen</h1>
+
+<form class=container>
+
+  <div class="container">
+
+    <!-- Erster Bereich-->
+    <div class="row align-items-start">
+
+      <!-- Erste Spalte im ersten Bereich-->
+      <div class="col-2">
+        <label> Projektname: </label> </br>
+        <label> Kunde: </label> </br>
+        <label> Startdatum: </label> </br>
+        <label> Enddatum: </label>
+      </div>
+
+      <!-- Zweite Spalte im ersten Bereich-->
+      <div class="col">
+        <input id="user" name="username" type="text" autofocus/>   </br>
+        <input id="kunde" name="kunde" list="kunden" required>     </br>
+          <datalist id="kunden">
+              <option value="Credit Suisse">
+              <option value="Siemens">
+              <option value="ABB">
+            </datalist>
+        <input id="startdatum" name="startdatum" type="date" required>  </br>
+        <input id="startdatum" name="startdatum" type="date" required>  </br>
+      </div>
+  <!-- Ende erster Bereich-->
+  </div>
+
+
+
+    <!-- Zweiter Bereich-->
+    <div class="row align-items-end">
+
+      <!-- Erste Spalte im zweiten Bereich-->
+      <div class="col">
+        <div class="form-group">
+        <label for="comment">Bemerkungen:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        </br>
+        <button type="button" class="btn">Submit</button>
+      </div>
+
+    <!-- Ende zweiter Bereich-->
+    </div>
+
+  <!-- Ende Container -->
+  </div>
+
+</form>
+
+</body>
+</html>
