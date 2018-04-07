@@ -30,10 +30,10 @@
 
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="nav navbar-nav">
-      <button class="btn active btn-nav btn-secondary">Dashboard</button>
-      <button class="btn btn-nav btn-secondary">Projekte</button>
-      <button class="btn btn-nav btn-secondary">Dashboard</button>
-      <button class="btn btn-nav btn-secondary">Auswertung</button>
+      <a class="btn active btn-nav btn-secondary"href="#">Home</a>
+      <a class="btn btn-nav btn-secondary"href="HTML\Dashboard.html">Dashboard</a>
+      <a class="btn btn-nav btn-secondary"href="HTML\ProjectNew.html">Projekte</a>
+      <a class="btn btn-nav btn-secondary"href="#">Auswertungen</a>
   </div>
 </nav>
 
@@ -141,42 +141,6 @@
 </div>
 
 <div class="container">
-  <h2>Functions</h2>
-  <div class="row">
-    <div class="col" id="dashboardzeichen">
-      <h5> Kalender </h5>
-      <img src="images\Kalender.PNG" alt="Kalenderzeichen" width="70em" height="70em">
-    </div>
-    <div class="col" id="dashboardzeichen">
-      <h5> Projekt </h5>
-      <img src="images\Projekt.PNG" alt="Projektzeichen" width="70em" height="70em">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col" id="dashboardzeichen">
-    <h5> Zeiterfassung </h5>
-    <img src="images\Zeit.PNG" alt="Kalenderzeichen" width="70em" height="70em">
-  </div>
-  <div class="col" id="dashboardzeichen">
-    <h5> Reminder </h5>
-    <img src="images\Reminder.PNG" alt="Reminderzeichen" width="70em" height="70em">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col" id="dashboardzeichen">
-    <h5> To-Do's </h5>
-    <img src="images\ToDo.PNG" alt="ToDozeichen" width="70em" height="70em">
-  </div>
-    <div class="col" id="dashboardzeichen">
-    <h5> Team </h5>
-    <img src="images\Team.PNG" alt="Teamzeichen" width="70em" height="70em">
-  </div>
-  </div>
-</div>
-
-<div class="container">
   <h2>All projects List</h2>
    <form class="form-inline">
        <div class="input-group">
@@ -207,7 +171,7 @@
      <form class="form-inline">
        <div class="input-group">
            <input class="form-control" size="50" placeholder="Search" required>
-           <button class="btn btn-light" type="button" id="go" style="margin-left:7px">Go!</button>
+           <button class="btn btn-light" type="button" id="go" style="margin-left:6px">Go!</button>
        </div>
      </form>
      <button type="button" id="loading-btn" class="btn btn-light" style="margin-top:5px">Refresh</button>
@@ -543,30 +507,6 @@
       </table>
   </section>
 </div>
-</body>
-
-
-
-
-
-<script>
-
-
-function startTime(){
-  var sd = Date.parse(new Date)
-  sd /= 6000;
-document.getElementById("startdate").innerHTML = sd;
-}
-
-function endTime(){
-  var ed = Date.parse(new Date)
-  ed /= 6000;
-  document.getElementById("enddate").innerHTML = ed;
-}
-
-</script>
-
-
 
 </body>
 </html>
