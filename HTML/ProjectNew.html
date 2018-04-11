@@ -1,78 +1,88 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-  <title>Projekt Anlegen</title>
+  <title>Uhuhr</title>
 
   <meta charset="UTF-8">
-  <!--Responsiv Bootstrap-->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!--CSS Bootstrap-->
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!--JS Bootstrap-->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <!--JQuery-->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <!--Verlinkung zum internen CSS-->
-  <link rel="stylesheet" href="Overview.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js\add_project_form.js.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="list.css">
 
 </head>
 
 <body>
+  <!-- Das ist die Navigationsbar -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <a class="navbar-brand" href="#">
+    <img src="images\Uhuhr_Logo.PNG" alt="logo" width="30em" height="32em">
+    Uhuhr
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+   <span class="navbar-toggler-icon"></span>
+ </button>
 
-  <h1>Projekt Anlegen</h1>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="nav navbar-nav">
+      <a class="btn btn-nav btn-secondary"href="#">Home</a>
+      <a class="btn btn-nav btn-secondary"href="Dashboard.html">Dashboard</a>
+      <a class="btn active btn-nav btn-secondary"href="ProjectNew.html">Projekte</a>
+      <a class="btn btn-nav btn-secondary"href="#">Auswertungen</a>
+  </div>
+</nav>
 
-<form class=container>
+<div class="container" style="margin-top:60px">
+    <h2>Projekt Anlegen</h2>
+</div>
 
-  <div class="container">
+
+<div class="container">
 
     <!-- Erster Bereich-->
-    <div class="row align-items-start">
-
-      <!-- Erste Spalte im ersten Bereich-->
-      <div class="col-2">
-        <label> Projektname: </label> </br>
-        <label> Kunde: </label> </br>
-        <label> Startdatum: </label> </br>
-        <label> Enddatum: </label>
-      </div>
-
-      <!-- Zweite Spalte im ersten Bereich-->
-      <div class="col">
-        <input id="user" name="username" type="text" autofocus/>   </br>
-        <input id="kunde" name="kunde" list="kunden" required>     </br>
-          <datalist id="kunden">
-              <option value="Credit Suisse">
-              <option value="Siemens">
-              <option value="ABB">
-            </datalist>
-        <input id="startdatum" name="startdatum" type="date" required>  </br>
-        <input id="startdatum" name="startdatum" type="date" required>  </br>
-      </div>
-  <!-- Ende erster Bereich-->
-  </div>
-
-
-
-    <!-- Zweiter Bereich-->
-    <div class="row align-items-end">
-
-      <!-- Erste Spalte im zweiten Bereich-->
-      <div class="col">
-        <div class="form-group">
-        <label for="comment">Bemerkungen:</label>
-        <textarea class="form-control" rows="5" id="comment"></textarea>
-        </div>
-        </br>
-        <button type="button" class="btn">Submit</button>
-      </div>
-
-    <!-- Ende zweiter Bereich-->
+    <div class="row">
+      <div class="col-sm-3"><label>Projektname:</label></div>
+      <div class="col-sm-9"><input placeholder="Projektname" class="form-control" id="user" name="username" type="text" autofocus/></div>
     </div>
-
-  <!-- Ende Container -->
-  </div>
-
-</form>
+    <div class="row">
+      <div class="col-sm-3"><label>Kunde:</label></div>
+      <div class="col-sm-9">
+        <select class="form-control custom-select" id="sel1">
+            <option selected>Choose Customer</option>
+            <option>CSS</option>
+            <option>Credit Suisse</option>
+            <option>ABB</option>
+          </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col text-sm-right">
+        <button type="button" style="margin-top:6px;margin-bottom:6px" class="btn btn-light">Neuer Kunde erfassen</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label>Startdatum:</label></div>
+      <div class="col-sm-9"><input class="form-control" id="startdatum" name="startdatum" type="date" required></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label>Enddatum:</label></div>
+      <div class="col-sm-9"><input class="form-control" id="enddatum" name="enddatum" type="date" required></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3"><label>Bemerkungen:</label></div>
+      <div class="col-sm-9"><input placeholder="Bemerkungen" class="form-control" id="bemerkungen" type="text" autofocus/></div>
+    </div>
+    <div class="row">
+      <div class="col text-sm-right">
+        <button type="button" style="margin-top:6px" class="btn btn-light">Submit</button>
+    </div>
+</div>
 
 </body>
 </html>
