@@ -1,9 +1,17 @@
 
 .jumbotron{
-  background-image: url("https://www.psdxhtml.com/images/walls-6.jpg");
-  background-color:  #71b6ce;
+  padding: 50px;
   text-align: center;
   text-transform: uppercase;
+}
+.footer{
+  color:white;
+}
+.link{
+  color:white;
+}
+.backgroundimg{
+  background-image: url("https://www.psdxhtml.com/images/walls-6.jpg");
 }
 .title {
   text-transform: uppercase;
