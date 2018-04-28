@@ -18,8 +18,6 @@ $("input#taskinput").keyup(function() {
   })
   .keyup();
 
-
-
 $("#save").on("click", function() {
 
     $("input#taskinput").val(function() {
@@ -36,18 +34,18 @@ $("#save").on("click", function() {
     $("#id02").hide();
   })
 
-
-
-
-
-
-
-
   $("#test").click(function(){
           $("p").append(" <b>Appended text</b>.");
           $('table').append('<tr><td class="p-name"><a href="#">Schrift rot machen</a><p id="taskoutput"></p><br><small>Created 11.12.2017</small></td></tr>');
 
       });
+})
 
 
+$(document).ready(function(){
+  $("#subproject").on("click", function(){
+    var selectedVal1 = $("#user").val();
+    var selectedVal2 = $("#startdatum").val();
+    $("#ulproject").append("<li>" + "" + selctedVal1 + "" + selectedVal2 + "</li>")
+  });
 })
