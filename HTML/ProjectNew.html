@@ -81,9 +81,37 @@
     </div>
     <div class="row">
       <div class="col text-sm-right">
-        <button type="button" style="margin-top:6px" class="btn btn-light">Submit</button>
+        <button type="button" style="margin-top:6px" class="btn btn-light" id=subproject>Submit</button>
     </div>
 </div>
+
+<div class="container">
+  <table class="table table-hover p-table">
+    <thead>
+      <tr>
+        <th>Projektname</th>
+        <th>Kunde</th>
+        <th>Startdatum</th>
+        <th>Enddatum</th>
+        <th>Bearbeiten</th>
+      </tr>
+    </thead>
+    <tbody id="subproject2">
+      <tr>
+        <td> New Dashboard BS3 </td>
+        <td> ABB </td>
+        <td> 21.01.2018 </td>
+        <td> 28.01.2018 </td>
+        <td>
+          <a href="project_details.html" class="btn btn-primary btn-xs" id=viewbutton><i class="fa fa-folder"></i> View </a>
+          <a href="#" class="btn btn-info btn-xs" onclick="document.getElementById('id01').style.display='block'"><i class="fas fa-pencil-alt"></i> Edit </a>
+          <a href="#" class="btn btn-danger btn-xs"><i class="far fa-trash-alt"></i> Delete </a>
+        </td>
+      </tr>
+
+  </table>
+</div>
+
 
 </body>
 </html>
