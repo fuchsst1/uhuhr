@@ -1,0 +1,58 @@
+<!DOCTYPE CSS>
+
+
+<style>
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+/* dbsign und dbimg werden für die Zeichen auf dem Dashboard verwendet*/
+
+#dbsign {
+  padding-left: 16px;
+  margin-top: 3px;
+  width: 10em;
+  height: 10em;
+}
+
+#dbimg {
+  width: 70px;
+  height: 70px;
+}
+
+header {
+
+}
+
+footer {
+
+}
+
+h1 {
+  font-size: 30px
+
+}
+
+h2{
+  font-size: 25px
+}
+
+h3{
+  font-size: 20px
+}
+
+h4{
+  font-size: 15px
+}
+
+h5 {
+  font-size: 10px
+}
+
+h6{
+  font-size: 5px
+}
+</style>

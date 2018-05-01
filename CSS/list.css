@@ -1,18 +1,11 @@
 
 .fonticon{
-  font-size: 8vw;
+  font-size: 10vw;
   color: #343a40;
 }
 
-.back-to-top {
- position: fixed;
- bottom:20px;
- right:20px;
- padding:1em;
- opacity: .5;
-}
 .iconlink{
-
+  font-size: 3vw;
   color: #343a40;
   text-decoration: none;
 }
@@ -27,9 +20,6 @@
 }
 .link{
   color:white;
-  display:inline;
-  margin-right: 10px;
-  margin-left: 5px;
 }
 .backgroundimg{
   background-image: url("https://www.psdxhtml.com/images/walls-6.jpg");
@@ -63,19 +53,12 @@ body{
 }
 input[type=text]{
     width: 100%;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-input.text{
-    width: 100%;
     padding: 12px 20px;
-    margin: 2px 0;
+    margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
 
 .addproject {
   margin: 2px 8px;
@@ -92,7 +75,9 @@ button:hover {
     margin: 24px 0 12px 0;
     position: relative;
 }
-
+.container {
+    padding: 16px;
+}
 span.psw {
     float: right;
     padding-top: 16px;
@@ -167,8 +152,8 @@ span.psw {
 
 
     .p-team img {
-        width: 25px;
-        height:25px;
+        width: 40px;
+        height:40px;
         border-radius: 5px;
     }
 
