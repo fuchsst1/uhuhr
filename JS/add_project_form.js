@@ -39,5 +39,52 @@ $(document).ready(function() {
     return false;
   });
 
+  $(document).ready(function(){
+      $("#subproject2").append("<tr>" +
+        "<td>" + 'Neue Homepage' + "</td>" +
+        "<td>" + 'ABB' + "</td>" +
+        "<td>" + '21.01.2018' + "</td>" +
+        "<td>" + '30.06.2018' + "</td>" +
+        "<td>" +
+        '<a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Anzeigen </a>' + " " +
+        '<a href="#" class="btn btn-info btn-xs"><i class="fas fa-pencil-alt"></i> Bearbeiten </a>' +  " " +
+        '<a href="#" class="btn btn-danger btn-xs"><i class="far fa-trash-alt"></i> Löschen </a>' + "</td>" +
+        "</tr>");
+
+        $("#subproject2").append("<tr>" +
+          "<td>" + 'Backend überarbeiten' + "</td>" +
+          "<td>" + 'Credit Suisse' + "</td>" +
+          "<td>" + '11.04.2018' + "</td>" +
+          "<td>" + '20.07.2018' + "</td>" +
+          "<td>" +
+          '<a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Anzeigen </a>' + " " +
+          '<a href="#" class="btn btn-info btn-xs"><i class="fas fa-pencil-alt"></i> Bearbeiten </a>' +  " " +
+          '<a href="#" class="btn btn-danger btn-xs"><i class="far fa-trash-alt"></i> Löschen </a>' + "</td>" +
+          "</tr>");
+    });
+
+
+
+
+
+
+  $(document).ready(function(){
+    $("#subproject").on("click", function(){
+      var selectedVal1 = $("#user").val();
+      var selectedVal2 = $("#sel1").val();
+      var selectedVal3 = $("#startdatum").val();
+      var selectedVal4 = $("#enddatum").val();
+      $("#subproject2").append("<tr>" +
+        "<td>" + selectedVal1 + "</td>" +
+        "<td>" + selectedVal2 + "</td>" +
+        "<td>" + selectedVal3 + "</td>" +
+        "<td>" + selectedVal4 + "</td>" +
+        "<td>" +
+        '<a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> Anzeigen </a>' + " " +
+        '<a href="#" class="btn btn-info btn-xs"><i class="fas fa-pencil-alt"></i> Bearbeiten </a>' +  " " +
+        '<a href="#" class="btn btn-danger btn-xs"><i class="far fa-trash-alt"></i> Löschen </a>' + "</td>" +
+        "</tr>");
+    });
+  })
 
 })
