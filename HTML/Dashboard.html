@@ -2,252 +2,442 @@
 <html lang="de">
 
 <head>
-  <title>Dashboard-Uhuhr</title>
+  <title>Uhuhr</title>
 
   <meta charset="UTF-8">
-
-  <!--Responsiv Bootstrap-->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!--CSS Bootstrap-->
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!--JS Bootstrap-->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <!--JQuery-->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <!--Verlinkung zum internen CSS-->
-  <link rel="stylesheet" href="Overview.css">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <style>
-  .col {
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-
-  /* dbsign und dbimg werden für die Zeichen auf dem Dashboard verwendet*/
-
-  #dbsign {
-
-    margin-top: 3px;
-  }
-
-  #dbimg {
-    width: 70px;
-    height: 70px;
-  }
-
-  #dbuserlogin {
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    border: 2px solid black;
-    width: 190px;
-    height: 90px;
-  }
-
-  header {
-
-  }
-
-  footer {
-
-  }
-
-  </style>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="../JS\add_project_form.js"></script>
+  <link rel="stylesheet" type="text/css" href="../CSS\list.css">
+  <link rel="stylesheet" type="text/css" href="../CSS\navigation.css">
 
 
 </head>
 
-<body>
+<body id="page-top" class="fixed-nav sticky-footer bg-dark">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="../startsite.html">
+      <img src="../images\Uhuhr_Logo.PNG" alt="logo" width="23em" height="23em">
+      Uhuhr
+    </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="#">
+            <i class="fas fa-tachometer-alt"></i>
+            <span class="nav-link-text">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="Todos.html">
+            <i class="far fa-check-square"></i>
+            <span class="nav-link-text">To-Do's</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="Projekte.html">
+            <i class="fas fa-paste"></i>
+            <span class="nav-link-text">Projekte</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="Kalender.html">
+            <i class="far fa-calendar-alt"></i>
+            <span class="nav-link-text">Kalender</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="Auswertungen.html">
+            <i class="fas fa-chart-line"></i>
+            <span class="nav-link-text">Auswertungen</span>
+          </a>
+        </li>
 
 
-<h1>Uhuhr Dashboard</h1>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="Zeiterfassung.html">
+            <i class="far fa-clock"></i>
+            <span class="nav-link-text">Zeiterfassung</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="Team.html">
+            <i class="fas fa-users"></i>
+            <span class="nav-link-text">Team</span>
+          </a>
+        </li>
+        </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-fw fa-envelope"></i>
+            <span class="d-lg-none">Messages
+              <span class="badge badge-pill badge-primary">12 New</span>
+            </span>
+            <span class="indicator text-primary d-none d-lg-block">
+              <i class="fa fa-fw fa-circle"></i>
+            </span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="messagesDropdown">
+            <h6 class="dropdown-header">New Messages:</h6>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <strong>David Miller</strong>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <strong>Jane Smith</strong>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <strong>John Doe</strong>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item small" href="#">View all messages</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-fw fa-bell"></i>
+            <span class="d-lg-none">Alerts
+              <span class="badge badge-pill badge-warning">6 New</span>
+            </span>
+            <span class="indicator text-warning d-none d-lg-block">
+              <i class="fa fa-fw fa-circle"></i>
+            </span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="alertsDropdown">
+            <h6 class="dropdown-header">New Alerts:</h6>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <span class="text-success">
+                <strong>
+                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+              </span>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <span class="text-danger">
+                <strong>
+                  <i class="fa fa-long-arrow-down fa-fw"></i>Status Update</strong>
+              </span>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <span class="text-success">
+                <strong>
+                  <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+              </span>
+              <span class="small float-right text-muted">11:21 AM</span>
+              <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item small" href="#">View all alerts</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle mr-lg-2" id="accountDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img alt="image" src="../images\avatar1.png" width="20px" height="20px">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="accountDropdown">
+              <h6 class="dropdown-header">Hans Muster:</h6>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <strong>Einstellungen</strong>
+                <div class="dropdown-message small"></div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <strong>Account bearbeiten</strong>
+                <div class="dropdown-message small"></div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <span class="dropdown-item text-center" >
+                <button type="button" class="btn btn-nav btn-secondary "data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-sign-out-alt"></i>Logout
+                </button>
+                <div class="dropdown-message small"></div>
+              </span>
+            </div>
+          </li>
+        <li class="nav-item">
+          <form class="form-inline my-2 my-lg-0 mr-lg-2">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search for...">
+              <span class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fas fa-sign-out-alt"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-<!-- Start Container -->
+<div class="content-wrapper">
+  <div class="container-fluid">
+
+    <div class="container">
+      <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">My Dashboard</li>
+          </ol>
+    </div>
 <div class="container">
-<!-- Erster Bereich-->
-  <div class="row align-items-start">
-<!-- Erste Spalte im ersten Bereich-->
-    <div class="col">
-      <div id=dbsign>
-        <h3> Kalender </h3>
-        <img src="images\Kalender.PNG" alt="Kalenderzeichen" id=dbimg>
+
+      <div class="row">
+      <div class="col-xl-4 col-sm-6 mb-4">
+        <div class="card text-white bg-primary o-hidden h-100">
+          <div class="card-body">
+            <div class="card-body-icon">
+              <i class="far fa-check-square iconlink"></i>
+            </div>
+            <div class="mr-5">26 To-Do's!</div>
+          </div>
+          <a class="card-footer text-white clearfix small z-1" href="Todos.html">
+            <span class="float-left">View Details</span>
+            <span class="float-right">
+              <i class="fa fa-angle-right"></i>
+            </span>
+          </a>
+        </div>
       </div>
-      <div id=dbsign>
-        <h3> Projekt </h3>
-        <p> <a href="index.html"><img src="images\Projekt.PNG" alt="Projektzeichen" id=dbimg> </a></p>
+      <div class="col-xl-4 col-sm-6 mb-4">
+        <div class="card text-white bg-danger o-hidden h-100">
+          <div class="card-body">
+            <div class="card-body-icon">
+              <i class="fas fa-paste iconlink"></i>
+            </div>
+            <div class="mr-5">2 Offene Projekte!</div>
+          </div>
+          <a class="card-footer text-white clearfix small z-1" href="Projekte.html">
+            <span class="float-left">View Details</span>
+            <span class="float-right">
+              <i class="fa fa-angle-right iconlink"></i>
+            </span>
+          </a>
+        </div>
       </div>
-      <div id=dbsign>
-        <h3> Zeiterfassung </h3>
-        <img src="images\Zeit.PNG" alt="Zeiterfassungzeichen" id=dbimg>
+      <div class="col-xl-4 col-sm-6 mb-4">
+        <div class="card text-white bg-secondary o-hidden h-100">
+          <div class="card-body">
+            <div class="card-body-icon">
+              <i class="far fa-calendar-alt iconlink"></i>
+            </div>
+            <div class="mr-5">Kalender</div>
+          </div>
+          <a class="card-footer text-white clearfix small z-1" href="Kalender.html">
+            <span class="float-left">View Details</span>
+            <span class="float-right">
+              <i class="fa fa-angle-right"></i>
+            </span>
+          </a>
+        </div>
       </div>
-    </div>
 
-<!-- Zweite Spalte im ersten Bereich-->
-    <div class="col">
-      <div id=dbsing>
-        <h3> Reminder </h3>
-        <img src="images\Reminder.PNG" alt="Reminderzeichen" id=dbimg>
+
+      <div class="col-xl-4 col-sm-6 mb-4">
+        <div class="card text-white bg-warning o-hidden h-100">
+          <div class="card-body">
+            <div class="card-body-icon">
+              <i class="fas fa-chart-line iconlink"></i>
+            </div>
+            <div class="mr-5">Auswertungen</div>
+          </div>
+          <a class="card-footer text-white clearfix small z-1" href="Auswertungen.html">
+            <span class="float-left">View Details</span>
+            <span class="float-right">
+              <i class="fa fa-angle-right"></i>
+            </span>
+          </a>
+        </div>
       </div>
-      <div id=dbsign>
-        <h3> To-Do's </h3>
-        <p> <a href="index.html"><img src="images\ToDo.PNG" alt="ToDozeichen" id=dbimg> </a></p>
+      <div class="col-xl-4 col-sm-6 mb-4">
+        <div class="card text-white bg-info o-hidden h-100">
+          <div class="card-body">
+            <div class="card-body-icon">
+              <i class="far fa-clock iconlink"></i>
+            </div>
+            <div class="mr-5">Zeiterfassung</div>
+          </div>
+          <a class="card-footer text-white clearfix small z-1" href="Zeiterfassung.html">
+            <span class="float-left">View Details</span>
+            <span class="float-right">
+              <i class="fa fa-angle-right"></i>
+            </span>
+          </a>
+        </div>
       </div>
-      <div id=dbsign>
-        <h3> Team </h3>
-        <img src="images\Team.PNG" alt="Teamzeichen" id=dbimg>
+      <div class="col-xl-4 col-sm-6 mb-4">
+        <div class="card text-white bg-success o-hidden h-100">
+          <div class="card-body">
+            <div class="card-body-icon">
+              <i class="fas fa-users iconlink"></i>
+            </div>
+            <div class="mr-5">Team</div>
+          </div>
+          <a class="card-footer text-white clearfix small z-1" href="Team.html">
+            <span class="float-left">View Details</span>
+            <span class="float-right">
+              <i class="fa fa-angle-right"></i>
+            </span>
+          </a>
+        </div>
       </div>
-    </div>
+</div>
+</div>
 
-  <!-- Dritte Spalte im ersten Bereich-->
-  <div class="col">
-    <div id=dbuserlogin>
-       Profil Tobias Muster
-    </div>
-  </div>
+<div class="container">
+  <h3>Offene Projekte</h3>
+</div>
 
 
-  <!-- Ende erster Bereich -->
-  </div>
 
-
-  <!-- Zweiter Bereich-->
-  <div class="row align-items-center">
-
-  <!-- Erste Spalte im zweiten Bereich-->
-  <div class="col">
-
-  <!-- Tabelle Laufende Projekte-->
-    <h3>Laufende Projekte</h3>
-  <!--Header Bereich der Tabelle-->
-    <table class="table table-striped" margin-top="10px">
-      <thead>
-        <tr>
-          <th width=15%>Projekt</td>
-          <th width=30%>Kunde</td>
-          <th width=30%>Anzahl offener Aufgaben</td>
-          <th width=15%>Status</td>
-        </tr>
+<div class="container">
+  <table class="table table-hover p-table">
+    <thead>
+      <tr>
+        <th>Task Name</th>
+        <th>Team Member</th>
+        <th>Task Progress</th>
+        <th>Priority</th>
+        <th>Custom</th>
+      </tr>
     </thead>
-    <!--Body Bereich der Tabelle-->
+
     <tbody>
-    </tr>
-      </tr>
       <tr>
-        <td>Integration</td>
-        <td>Küenzli AG</td>
-        <td>3 Aufgaben</td>
-        <td>   <div class="progress-bar" role="progressbar" aria-valuenow="90"
-      aria-valuemin="0" aria-valuemax="100" style="width:90%">
-        90%
-      </div> </td>
-      </tr>
-      <tr>
-        <td>System Update</td>
-        <td>Schoch AG</td>
-        <td>5 Aufgaben</td>
-        <td>  <div class="progress-bar" role="progressbar" aria-valuenow="80"
-      aria-valuemin="0" aria-valuemax="100" style="width:80%">
-        80%
-      </div> </td>
-      </tr>
-      <tr>
-        <td>Go Live</td>
-        <td>Meister AG</td>
-        <td>8 Aufgaben</td>
-        <td>  <div class="progress-bar" role="progressbar" aria-valuenow="50"
-      aria-valuemin="0" aria-valuemax="100" style="width:50%">
-        50%
-      </div>
+        <td class="p-name">
+          <a href="#">Schrift rot machen</a>
+          <br>
+          <small>Created 11.12.2017</small>
+        </td>
+        <td class="p-team">
+          <a href="#"><img alt="image" class="" src="../images\avatar1.png"></a>
+        </td>
+        <td class="p-progress">
+          <div class="progress progress-xs">
+            <div style="width: 35%;" class="progress-bar progress-bar-success"></div>
+          </div>
+          <small>35% Complete </small>
+        </td>
+        <td>
+          <span class="label label-default">low</span>
+        </td>
+        <td>
+          <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+          <a href="#" class="btn btn-info btn-xs" onclick="document.getElementById('id02').style.display='block'"><i class="fas fa-pencil-alt"></i> Edit </a>
+          <a href="#" class="btn btn-danger btn-xs"><i class="far fa-trash-alt"></i> Delete </a>
         </td>
       </tr>
+      <tr>
+        <td class="p-name">
+          <a href="project_details.html">Homebutton in Navbar einfügen</a>
+          <br>
+          <small>Created 10.11.2017</small>
+        </td>
+        <td class="p-team">
+          <a href="#"><img alt="image" class="" src="../images\avatar2.png"></a>
+        </td>
+        <td class="p-progress">
+          <div class="progress progress-xs">
+            <div style="width: 22%;" class="progress-bar progress-bar-success"></div>
+          </div>
+          <small>22% Complete </small>
+        </td>
+        <td>
+          <span class="label label-primary">high</span>
+        </td>
+        <td>
+          <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+          <a href="#" class="btn btn-info btn-xs" onclick="document.getElementById('id02').style.display='block'"><i class="fas fa-pencil-alt"></i> Edit </a>
+          <a href="#" class="btn btn-danger btn-xs"><i class="far fa-trash-alt"></i> Delete </a>
+        </td>
+      </tr>
+      </tr>
+
     </tbody>
-    </table>
+  </table>
+  </section>
+</div>
 
-  <!-- Ende Erste Spalte im zweiten Bereich-->
-  </div>
+</div>
 
-  <!-- Ende zweiter Bereich -->
-  </div>
+<footer class="sticky-footer bg-dark">
+ <div class="container">
 
 
-<!-- Dritter Bereich-->
-<div class="row align-items-end">
+  <small class="text-uppercase mb-4 font-weight-bold link">Kontakt:</small>
+  <small class="link"><i class="fa fa-home mr-3"></i>Winterthur</small>
+  <a class="link" href="mailto:fuchsst1@students.zhaw.ch"><small class="link"><i class="fa fa-envelope mr-3"></i>E-Mail</small></a>
+  <small class="link"><i class="fa fa-phone mr-3"></i>+41 12 345 67 89</small>
+  <small class="link" style="float: right; margin-left:-40px;">© 2018 Uhuhr</small>
+</div>
+</footer>
 
-  <!-- Erste Spalte im dritten Bereich-->
-  <div class="col">
-      <h2>To-Do's</h2>
-  <!-- Liste mit To-Do Art wird iniziert -->
-      <ul class="list-group">
-  <!-- Erste Art wird iniziert -->
-        <li class="list-group-item">Neu <span class="badge">2</span></li>
 
-  <!-- Liste mit Checkboxen wird für erste Art iniziert -->
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-          <label class="form-check-label" for="inlineCheckbox1">Mock-Up</label>
-        </div>
+<a class="back-to-top rounded btn btn-dark" href="#page-top">
+  <i class="fa fa-angle-up"></i>
+</a>
 
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-          <label class="form-check-label" for="inlineCheckbox1">Training</label>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
       </div>
-
-  <!-- Zweite Art wird iniziert -->
-      <li class="list-group-item">High Priority <span class="badge">3</span></li>
-
-  <!-- Liste mit Checkboxen wird für erste Art iniziert -->
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-          <label class="form-check-label" for="inlineCheckbox1">Lean Canvas</label>
-        </div>
-
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-          <label class="form-check-label" for="inlineCheckbox1">System Vorbereitung</label>
+      <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        <a class="btn btn-primary" href="../index.html">Logout</a>
       </div>
-
-      <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-          <label class="form-check-label" for="inlineCheckbox1">Termin mit H. Meister</label>
-      </div>
-
-    <!-- Dritte Art wird iniziert -->
-        <li class="list-group-item">Reminder <span class="badge">1</span></li>
-
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">Telefon mit R. Schoch</label>
-        </div>
-
-    <!-- Ende Liste mit To-Do-->
-      </ul>
-
-    <!-- Ende Erste Spalte im dritten Bereich-->
     </div>
-
-  <!-- Zweite Spalte im dritten Bereich-->
-  <div class="col">
-
   </div>
-
-  <!-- Dritte Spalte im dritten Bereich-->
-  <div class="col">
-
-  </div>
-
-<!-- Ende Dritter Bereich -->
 </div>
 
-<!-- Ende Container -->
+<script src="../JS/jquery.easing.min.js"></script>
+<script src="../JS/sb-admin.min.js"></script>
+
+
 </div>
-
-
 </body>
+
 </html>

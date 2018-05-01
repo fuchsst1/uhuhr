@@ -43,7 +43,7 @@
             <span class="nav-link-text">To-Do's</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+        <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="Projekte.html">
             <i class="fas fa-paste"></i>
             <span class="nav-link-text">Projekte</span>
@@ -55,7 +55,7 @@
             <span class="nav-link-text">Kalender</span>
           </a>
         </li>
-        <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Charts">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="Auswertungen.html">
             <i class="fas fa-chart-line"></i>
             <span class="nav-link-text">Auswertungen</span>
@@ -214,12 +214,51 @@
             <li class="breadcrumb-item">
               <a href="Dashboard.html">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">Auswertungen</li>
+            <li class="breadcrumb-item active">Projekte</li>
           </ol>
     </div>
 
-<!-- Inhalt -->
+    <div class="container">
 
+
+        <div class="row">
+          <div class="col-sm-3"><label>Projektname:</label></div>
+          <div class="col-sm-9"><input placeholder="Projektname" class="form-control text" id="user" name="username" type="text" autofocus/></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3"><label>Kunde:</label></div>
+          <div class="col-sm-9">
+            <select class="form-control custom-select" id="sel1">
+                <option selected>Choose Customer</option>
+                <option>CSS</option>
+                <option>Credit Suisse</option>
+                <option>ABB</option>
+              </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col text-sm-right">
+            <button type="button" style="margin-top:6px;margin-bottom:6px" class="btn btn-light">Neuer Kunde erfassen</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3"><label>Startdatum:</label></div>
+          <div class="col-sm-9"><input class="form-control text" id="startdatum" name="startdatum" type="date" required></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3"><label>Enddatum:</label></div>
+          <div class="col-sm-9"><input class="form-control text" id="enddatum" name="enddatum" type="date" required></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3"><label>Bemerkungen:</label></div>
+          <div class="col-sm-9"><input placeholder="Bemerkungen" class="form-control text" id="bemerkungen" type="text" autofocus/></div>
+        </div>
+        <div class="row">
+          <div class="col text-sm-right">
+            <button type="button" style="margin-top:6px" class="btn btn-light">Submit</button>
+        </div>
+    </div>
 <footer class="sticky-footer bg-dark">
  <div class="container">
 
