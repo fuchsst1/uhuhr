@@ -12,10 +12,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="../JS\todolist.js"></script>
   <script src="../JS\add_project_form.js"></script>
   <link rel="stylesheet" type="text/css" href="../CSS\list.css">
   <link rel="stylesheet" type="text/css" href="../CSS\navigation.css">
-
+  <link rel="stylesheet" type="text/css" href="../CSS\todo.css">
 
 </head>
 
@@ -217,7 +218,51 @@
             <li class="breadcrumb-item active">To-Do's</li>
           </ol>
     </div>
-<!-- Inhalt -->
+
+    <!--Beginn der Todo Liste-->
+
+        <div class="container">
+          <div class="row">
+          <div class="col">
+          <div class="card text-white bg-primary o-hidden h-100">
+          <div id="myDIV" class="card-body">
+            <h3>Meine To-Do Liste</h3>
+            <div class="input-group">
+            <input id="myInput" placeholder="neue Aufgabe" class="form-control text" name="todo" autofocus="" type="text">
+            <span class="input-group-append">
+            <button class="btn" onclick="newElement()">Hinzufügen<type= button></button>
+            </div>
+          </span>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+          <div>
+          <ul id="myUL">
+            <li>Hit the gym<span class="close">×</span></li>
+            <li class="checked">Pay bills<span class="close">×</span></li>
+            <li>Meet George<span class="close">×</span></li>
+            <li>Buy eggs<span class="close">×</span></li>
+            <li>Read a book<span class="close">×</span></li>
+            <li>Organize office<span class="close">×</span></li>
+          </ul>
+          </div>
+
+          <script>
+
+            // Add a "checked" symbol when clicking on a list item
+            var list = document.querySelector("ul");
+            list.addEventListener("click", function(ev) {
+              if (ev.target.tagName === "LI") {
+                ev.target.classList.toggle("checked");
+              }
+            }, false);
+
+          </script>
+
+
 
 <footer class="sticky-footer bg-dark">
  <div class="container">
@@ -235,7 +280,6 @@
 <a class="back-to-top rounded btn btn-dark" href="#page-top">
   <i class="fa fa-angle-up"></i>
 </a>
-
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -255,7 +299,7 @@
   </div>
 </div>
 
-<script src="../JS/jquery.easing.min.js"></script>
+<!-- <script src="../JS/jquery.easing.min.js"></script> -->
 <script src="../JS/sb-admin.min.js"></script>
 
 
