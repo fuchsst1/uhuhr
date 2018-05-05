@@ -21,11 +21,12 @@ for (i = 0; i < close.length; i++) {
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
-  var ul = document.getElementById("mytodo");
+  var ul = document.getElementById("todoUL");
   var li = document.createElement("li");
   var inputValue = document.getElementById("newtodo").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
+  ul.appendChild(li);
   if (inputValue === '') {
     alert("Bitte schreib eine neue Aufgabe in das Feld.");
   } else {
@@ -38,6 +39,7 @@ function newElement() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
+  ul.appendChild(li);
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {

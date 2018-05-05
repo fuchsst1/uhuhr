@@ -240,28 +240,29 @@
       </div>
 
           <div class="container" id="mytodo">
-          <ul id="mytodo" class="todo">
-            <li>Hit the gym<span class="close">×</span></li>
-            <li class="checked">Pay bills<span class="close">×</span></li>
-            <li>Meet George<span class="close">×</span></li>
-            <li>Buy eggs<span class="close">×</span></li>
-            <li>Read a book<span class="close">×</span></li>
-            <li>Organize office<span class="close">×</span></li>
-
+          <ul id="todoUL" class="todo">
+            <li>LNW3 abgeben<span class="close">×</span></li>
+            <li class="checked">Back-End fertigstellen<span class="close">×</span></li>
+            <li>Front-End optimieren<span class="close">×</span></li>
+            <li>ITPM LNW3 fertigstellen<span class="close">×</span></li>
+            <li>Tests durchführen<span class="close">×</span></li>
 
           </ul>
-          </div>
-          <script>
+
+            <script>
 
             // Add a "checked" symbol when clicking on a list item
-            var list = document.querySelector("ul");
-            list.addEventListener("click", function(ev) {
-              if (ev.target.tagName === "LI") {
-                ev.target.classList.toggle("checked");
-              }
+            var list = document.querySelector('#todoUL');
+            list.addEventListener('click', function(ev) {
+            if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+            }
             }, false);
 
-          </script>
+            </script>
+
+          </div>
+
 
 
 
