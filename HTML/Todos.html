@@ -82,7 +82,7 @@
             <span class="nav-link-text">Team</span>
           </a>
         </li>
-        </ul>
+      </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
           <a class="nav-link text-center" id="sidenavToggler">
@@ -169,30 +169,30 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle mr-lg-2" id="accountDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle mr-lg-2" id="accountDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img alt="image" src="../images\avatar1.png" width="20px" height="20px">
             </a>
-            <div class="dropdown-menu" aria-labelledby="accountDropdown">
-              <h6 class="dropdown-header">Hans Muster:</h6>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
+          <div class="dropdown-menu" aria-labelledby="accountDropdown">
+            <h6 class="dropdown-header">Hans Muster:</h6>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
                 <strong>Einstellungen</strong>
                 <div class="dropdown-message small"></div>
               </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
                 <strong>Account bearbeiten</strong>
                 <div class="dropdown-message small"></div>
               </a>
-              <div class="dropdown-divider"></div>
-              <span class="dropdown-item text-center" >
+            <div class="dropdown-divider"></div>
+            <span class="dropdown-item text-center">
                 <button type="button" class="btn btn-nav btn-secondary "data-toggle="modal" data-target="#exampleModal">
                     <i class="fas fa-sign-out-alt"></i>Logout
                 </button>
                 <div class="dropdown-message small"></div>
               </span>
-            </div>
-          </li>
+          </div>
+        </li>
         <li class="nav-item">
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
             <div class="input-group">
@@ -213,55 +213,51 @@
     </div>
   </nav>
 
-<div class="content-wrapper">
-  <div class="container-fluid">
+  <div class="content-wrapper">
+    <div class="container-fluid">
 
-    <div class="container">
-      <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="Dashboard.html">Dashboard</a>
-            </li>
-            <li class="breadcrumb-item active">To-Do's</li>
-          </ol>
-    </div>
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="Dashboard.html">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">To-Do's</li>
+        </ol>
+      </div>
 
-    <!--Beginn der Todo Liste-->
+      <!--Beginn der Todo Liste-->
 
-        <div class="container">
-          <div class="row">
+      <div class="container">
+        <div class="row">
           <div class="col">
-          <div class="card text-white bg-primary o-hidden h-100">
-          <div id="myDIV" class="card-body">
-            <h3>Meine To-Do Liste</h3>
-            <div class="input-group">
-            <input id="newtodo" placeholder="neue Aufgabe" class="form-control text" name="todo" autofocus="" type="text">
-            <span class="input-group-append">
-            <button class="btn" onclick="newElement()">Hinzufügen<type= button></button>
+            <div class="card text-white bg-primary o-hidden h-100">
+              <div id="myDIV" class="card-body">
+                <h3>Meine To-Do Liste</h3>
+                <div class="input-group">
+                  <input id="newtodo" placeholder="neue Aufgabe" class="form-control" name="todo" autofocus="" type="text">
+                  <div class="input-group-append">
+                  <span class="input-group-text btn" onclick="newElement()">Hinzufügen</span>
+                  </div>
+                </div>
+                </div>
+              </div>
             </div>
-          </span>
-          </div>
           </div>
         </div>
-      </div>
-      </div>
 
-          <div class="container" id="mytodo">
-            <ul id="todoUL" class="todo">
-            </ul>
-          </div>
-            <script>
+
 
             // Add a "checked" symbol when clicking on a list item
             var list = document.querySelector('#todoUL');
             list.addEventListener('click', function(ev) {
-            if (ev.target.tagName === 'LI') {
-            ev.target.classList.toggle('checked');
-            }
+              if (ev.target.tagName === 'LI') {
+                ev.target.classList.toggle('checked');
+              }
             }, false);
+          </script>
 
-            </script>
+        </div>
 
-          </div>
 
 
 
@@ -281,42 +277,43 @@
  <div class="container">
 
 
-  <small class="text-uppercase mb-4 font-weight-bold link">Kontakt:</small>
-  <small class="link"><i class="fa fa-home mr-3"></i>Winterthur</small>
-  <a class="link" href="mailto:fuchsst1@students.zhaw.ch"><small class="link"><i class="fa fa-envelope mr-3"></i>E-Mail</small></a>
-  <small class="link"><i class="fa fa-phone mr-3"></i>+41 12 345 67 89</small>
-  <small class="link" style="float: right; margin-left:-40px;">© 2018 Uhuhr</small>
-</div>
-</footer>
+
+            <small class="text-uppercase mb-4 font-weight-bold link">Kontakt:</small>
+            <small class="link"><i class="fa fa-home mr-3"></i>Winterthur</small>
+            <a class="link" href="mailto:fuchsst1@students.zhaw.ch"><small class="link"><i class="fa fa-envelope mr-3"></i>E-Mail</small></a>
+            <small class="link"><i class="fa fa-phone mr-3"></i>+41 12 345 67 89</small>
+            <small class="link" style="float: right; margin-left:-40px;">© 2018 Uhuhr</small>
+          </div>
+        </footer>
 
 
-<a class="back-to-top rounded btn btn-dark" href="#page-top">
+        <a class="back-to-top rounded btn btn-dark" href="#page-top">
   <i class="fa fa-angle-up"></i>
 </a>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
-      </div>
-      <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-      <div class="modal-footer">
-        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-        <a class="btn btn-primary" href="../index.html">Logout</a>
+              </div>
+              <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="../index.html">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <script src="../JS/jquery.easing.min.js"></script> -->
+        <script src="../JS/sb-admin.min.js"></script>
+
       </div>
     </div>
-  </div>
-</div>
-
-<!-- <script src="../JS/jquery.easing.min.js"></script> -->
-<script src="../JS/sb-admin.min.js"></script>
-
-
-</div>
 </body>
 
 </html>
