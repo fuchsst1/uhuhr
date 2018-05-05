@@ -21,16 +21,17 @@ for (i = 0; i < close.length; i++) {
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
+  var ul = document.getElementById("mytodo");
   var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
+  var inputValue = document.getElementById("newtodo").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("Bitte schreib eine neue Aufgabe in das Feld.");
   } else {
-    document.getElementById("myUL").appendChild(li);
+    document.getElementById("mytodo").appendChild(li);
   }
-  document.getElementById("myInput").value = "";
+  document.getElementById("newtodo").value = "";
 
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");

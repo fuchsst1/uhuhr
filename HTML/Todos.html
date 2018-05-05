@@ -228,7 +228,7 @@
           <div id="myDIV" class="card-body">
             <h3>Meine To-Do Liste</h3>
             <div class="input-group">
-            <input id="myInput" placeholder="neue Aufgabe" class="form-control text" name="todo" autofocus="" type="text">
+            <input id="newtodo" placeholder="neue Aufgabe" class="form-control text" name="todo" autofocus="" type="text">
             <span class="input-group-append">
             <button class="btn" onclick="newElement()">Hinzufügen<type= button></button>
             </div>
@@ -239,17 +239,18 @@
       </div>
       </div>
 
-          <div>
-          <ul id="myUL">
+          <div class="container" id="mytodo">
+          <ul id="mytodo" class="todo">
             <li>Hit the gym<span class="close">×</span></li>
             <li class="checked">Pay bills<span class="close">×</span></li>
             <li>Meet George<span class="close">×</span></li>
             <li>Buy eggs<span class="close">×</span></li>
             <li>Read a book<span class="close">×</span></li>
             <li>Organize office<span class="close">×</span></li>
+
+
           </ul>
           </div>
-
           <script>
 
             // Add a "checked" symbol when clicking on a list item

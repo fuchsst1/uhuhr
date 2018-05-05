@@ -1,11 +1,11 @@
 /* Remove margins and padding from the list */
-.todo ul {
+#mytodo ul {
   margin: 0;
   padding: 0;
 }
 
 /* Style the list items */
-.todo ul li {
+#mytodo ul li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -22,24 +22,24 @@
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-.todo ul li:nth-child(odd) {
+#mytodo ul li:nth-child(odd) {
   background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
-.todo ul li:hover {
+#mytodo ul li:hover {
   background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
-.todo ul li.checked {
+#mytodo ul li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
-.todo ul li.checked::before {
+#mytodo ul li.checked::before {
   content: '';
   position: absolute;
   border-color: #fff;
@@ -50,29 +50,4 @@
   transform: rotate(45deg);
   height: 15px;
   width: 7px;
-}
-
-/* Style the header */
-.headertodo {
-  background-color: blue;
-  padding: 20px 40px;
-  color: white;
-  text-align: center;
-}
-
-/* Clear floats after the header */
-.headertodo:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the input */
-.todo [type=text]{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
 }
