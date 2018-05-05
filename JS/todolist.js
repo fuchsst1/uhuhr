@@ -1,5 +1,5 @@
 // Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
+/*var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -8,7 +8,7 @@ for (i = 0; i < myNodelist.length; i++) {
   span.appendChild(txt);
   myNodelist[i].appendChild(span);
 }
-
+*/
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
 var i;
@@ -26,11 +26,11 @@ function newElement() {
   var inputValue = document.getElementById("newtodo").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
-  ul.appendChild(li);
   if (inputValue === '') {
     alert("Bitte schreib eine neue Aufgabe in das Feld.");
   } else {
     document.getElementById("mytodo").appendChild(li);
+    ul.appendChild(li);
   }
   document.getElementById("newtodo").value = "";
 
@@ -39,7 +39,6 @@ function newElement() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
-  ul.appendChild(li);
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {

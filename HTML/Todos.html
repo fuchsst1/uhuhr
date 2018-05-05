@@ -13,7 +13,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
   <script src="../JS\todolist.js"></script>
-  <script src="../JS\add_project_form.js"></script>
+  <script src="../JS/projectunderscore.js"></script>
+  <script type="text/template" id="todo_list_item_template">
+    <li>
+    <%= todos_name %> <span class="close">×</span>
+    </li>
+  </script>
+  <script src="../JS\todo_list_dummy_data.js"></script>
   <link rel="stylesheet" type="text/css" href="../CSS\list.css">
   <link rel="stylesheet" type="text/css" href="../CSS\navigation.css">
   <link rel="stylesheet" type="text/css" href="../CSS\todo.css">
@@ -240,17 +246,7 @@
         </div>
 
 
-      <div class="container" id="mytodo">
-          <ul id="todoUL" class="todo">
-            <li>LNW3 abgeben<span class="close">×</span></li>
-            <li class="checked">Back-End fertigstellen<span class="close">×</span></li>
-            <li>Front-End optimieren<span class="close">×</span></li>
-            <li>ITPM LNW3 fertigstellen<span class="close">×</span></li>
-            <li>Tests durchführen<span class="close">×</span></li>
 
-          </ul>
-
-          <script>
             // Add a "checked" symbol when clicking on a list item
             var list = document.querySelector('#todoUL');
             list.addEventListener('click', function(ev) {
@@ -265,8 +261,21 @@
 
 
 
-        <footer class="sticky-footer bg-dark">
-          <div class="container">
+
+
+
+    <!--Templating Todo Liste-->
+  <!--          <script type="text/template" id="todo_list_template">
+
+                <li><%= aufgabe %><span class="close">×</span></li>
+
+          </script>
+-->
+
+
+<footer class="sticky-footer bg-dark">
+ <div class="container">
+
 
 
             <small class="text-uppercase mb-4 font-weight-bold link">Kontakt:</small>
