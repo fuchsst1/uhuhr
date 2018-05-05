@@ -15,6 +15,23 @@
   <script src="../JS\add_project_form.js"></script>
   <link rel="stylesheet" type="text/css" href="../CSS\list.css">
   <link rel="stylesheet" type="text/css" href="../CSS\navigation.css">
+  <script src="../JS/projectunderscore.js"></script>
+  <script id="mytemplate" type="text/template">
+
+    <div class="card mb-3">
+      <div class="card-header">
+        <i class="fas fa-chart-line"></i> <%= statistiken_name %></div>
+      <div class="card-body">
+        <a href="<%=statistiken_img%>">
+          <img alt="image" src="<%=statistiken_img%>" style="max-width: 90%; height: auto">
+      </div>
+    </a>
+      <div class="card-footer small text-muted">Letzes Update: 05.05.2018</div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8">
+  </script>
+  <script src="../JS/auswertungen_templ.js"></script>
 
 
 </head>
@@ -394,6 +411,14 @@
   </table>
   </section>
 </div>
+
+<div class="container">
+  <h3>Statistiken</h3>
+  <hr class="mt-2">
+  <div class="card-columns"  id="content">
+
+</div>
+
 
 </div>
 
