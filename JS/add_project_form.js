@@ -18,11 +18,20 @@ $(document).ready(function(){
       '<a href="#" class="btn btn-danger btn-xs"><i class="far fa-trash-alt"></i> Löschen </a>' + "</td>" +
       "</tr>");
   });
+  $("a[href='#page-top']").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+  });
+
+  $("#startbtn").on("click",function(){
+    var dt = new Date();
+    var startzeit = dt.getHours() + ":" + dt.getMinutes()+ ":" + dt.getSeconds();
+    $("#startzeit").val(startzeit);
+    });
+
+    $("#stopp").on("click",function(){
+      var dt = new Date();
+      var endzeit = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+      $("#endzeit").val(endzeit);
+      });
 })
-
-
-
-$("a[href='#page-top']").click(function() {
-$("html, body").animate({ scrollTop: 0 }, "slow");
-return false;
-});
