@@ -34,4 +34,10 @@ $(document).ready(function(){
       var endzeit = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
       $("#endzeit").val(endzeit);
       });
+
+      $("#register").on("click", function() {
+    $("#hide").show();
+  })
+
+  $("#hide").hide();
 })
